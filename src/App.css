@@ -1,38 +1,305 @@
+/* ------------- Generals -------------- */
+body{
+  margin: 0;
+}
+
+html{
+  font-size: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------- Head -------------- */
 .App {
   text-align: center;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header{
+  background-color: rgb(0, 128, 5);
+  height: 40vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header h2{
+  font-size: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.Header h1{
   color: white;
+  font-size: 4rem;
+  margin-bottom: 7vh;
 }
 
-.App-link {
-  color: #61dafb;
+.Header hr{
+  width: 10rem;
+  margin-bottom: 3vh;
+  
+}
+.Header p{
+  width: 50%;
+  margin: 1vh auto 4vh auto;
+}
+.Header_section{
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header_section div{
+  width: 20rem;
+  height: 3vh;
 }
+
+.Header_section div p{
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: 19rem;
+}
+
+.Header_section div span{
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+/* ------------- Firstsection -------------- */
+.FirstSection_Header{
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.FirstSection_Header h3{
+  font-size: 2rem;
+  margin: 3vh auto 0 auto;
+  color: rgb(0, 128, 5);
+}
+
+.FirstSection_Header h4{
+  font-size: 3rem;
+  width: 60%;
+  margin: 3vh auto;
+}
+
+.four_items{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  text-align: left;
+  margin: 5vh 10vw;
+  
+}
+
+.four_items div{
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.four_items img{
+  width: 5%;
+}
+
+/* ------------- Footer -------------- */
+.img_gallery{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  margin: 10vh auto;
+  gap: 30px;
+}
+
+.img_gallery div img{
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  min-width: 100%;
+  min-height: 50%;
+  border-radius: 20px;
+}
+
+.img_gallery div p{
+ font-size: 1.2rem;
+}
+
+/* ---------- MEDIA QUERYS ---------------- */
+
+  /* ----------- MEDIA QUERYS 900 ---------- */
+
+  @media only screen and (max-width: 900px) {
+    .Header{
+      background-color: rgb(0, 128, 5);
+      height: 38vh;
+      text-align: center;
+      margin-top: -17px;
+      width: 100%;
+    }
+    
+    .Header h1{
+      font-size: 3rem;
+      margin-bottom: 4vh;
+    }
+  
+    .Header hr{
+      margin-bottom: 2vh;
+      width: 300px;
+    }
+  
+    .Header p{
+      width: 60%;
+      margin: 1vh auto;
+      font-size: 1.2rem;
+    }
+  
+    .Header_section{
+      align-items: center;
+      width: 90%;
+    }
+  
+    .Header_section div{
+      margin: 2vh auto;
+    }
+
+    .Header_section div span{
+      font-size: 1.8rem;
+    }
+  /* Firstsection */
+    .FirstSection_Header h4{
+      font-size: 2.2rem;
+      width: 80%;
+      margin: 3vh auto;
+    }
+  
+    .four_items{
+      grid-template-columns: repeat(1, 1fr);
+      margin: 5vh 5vw;
+    }
+  
+    .four_items div{
+      font-size: 1.4rem;
+    }
+
+    .four_items div p{
+      width: 90%;
+    }
+  
+    .four_items img{
+      width: 3%;
+    }
+  
+    .img_gallery{
+      grid-template-columns: repeat(2, 1fr);
+      width: 75%;
+      margin: 0 auto;
+    }
+  
+    .img_gallery div img{
+      width: 100%;
+      
+      margin: 0 auto;
+      
+    }
+  }
+    /* ----------- MEDIA QUERYS 768 ---------- */
+    /* ----------- MEDIA QUERYS 768 ---------- */
+
+@media only screen and (max-width: 768px) {
+  
+  .Header h1 {
+  font-size: 3rem;
+  margin-bottom: 5vh;
+  }
+  .Header p {
+  width: 80%;
+  margin: 1vh auto 3vh auto;
+  }
+  .Header_section {
+  flex-wrap: wrap;
+  }
+  .Header_section div {
+  width: 40%;
+  margin: 2vh 0;
+  }
+  .Header_section div p {
+  font-size: 1rem;
+  width: 100%;
+  margin: 0.5vh 0;
+  }
+  .Header_section div span {
+  font-size: 3rem;
+  }
+  .FirstSection_Header h4 {
+  font-size: 2.5rem;
+  width: 80%;
+  margin: 3vh auto;
+  }
+  .four_items {
+  grid-template-columns: repeat(1, 1fr);
+  margin: 5vh 0;
+  }
+  .four_items div {
+  font-size: 1rem;
+  }
+  .img_gallery {
+  grid-template-columns: repeat(2, 1fr);
+  margin: 10vh auto;
+  }
+  .img_gallery div img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  }
+  } 
+    /* ----------- MEDIA QUERYS 480 ---------- */
+    /* ----------- MEDIA QUERYS 480 ---------- */
+  
+  @media only screen and (max-width: 480px) {
+  
+  .Header{
+    height: 40vh;
+  }
+  
+    .Header h1 {
+  font-size: 2rem;
+  margin-bottom: 3vh;
+  }
+  .Header p {
+  width: 90%;
+  margin: 1vh auto 2vh auto;
+  }
+
+  .Header_section div {
+  width: 80%;
+  margin: 2vh 0;
+  }
+  .Header_section div p {
+  font-size: 0.8rem;
+  }
+  .Header_section div span {
+  font-size: 2.5rem;
+  }
+  .FirstSection_Header h3 {
+  font-size: 1.5rem;
+  }
+  .FirstSection_Header h4 {
+  font-size: 2rem;
+  width: 90%;
+  margin: 3vh auto;
+  }
+  .four_items {
+  grid-template-columns: repeat(1, 1fr);
+  margin: 5vh 0;
+  }
+  .four_items div {
+  font-size: 0.9rem;
+  }
+  .img_gallery {
+  grid-template-columns: repeat(1, 1fr);
+  margin: 8vh auto;
+  }
+  .img_gallery div img {
+  height: 150px;
+  border-radius: 10px;
+  }
+  }
+
